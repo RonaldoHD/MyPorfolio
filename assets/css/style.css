@@ -1802,6 +1802,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     justify-content: center;
     align-items: stretch;
     gap: 25px;
+    height: 850px;
   }
 
   .main-content {
@@ -1809,7 +1810,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: 75%;
     margin: 0;
     overflow-y: scroll;
-    height: 750px;
+    height: 100%;
     border-radius: 25px;
     
 
