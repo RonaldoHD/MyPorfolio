@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Ecommerce dsdsdsds",
+    "link": "https://fantasybysamari.shop/",
+    "image": "./assets/images/fantasy.png",
+    "category": "Wordpress, WooCommerce",
+    "alt": "finance"
+  },
+  {
+    "title": "Freight and Fleet Solutions LLC",
+    "link": "https://ffsolutions.onrender.com/",
+    "image": "./assets/images/ffsolutions.png",
+    "category": "HTML, CSS, Javascript",
+    "alt": "finance"
+  },
+  {
+    "title": "Movie Trailer Website",
+    "link": "https://hdmovies.onrender.com",
+    "image": "./assets/images/movies.png",
+    "category": "React Js, API",
+    "alt": "finance"
+  },
+  {
+    "title": "Matbakhti Store",
+    "link": "https://matbakhti.onrender.com",
+    "image": "./assets/images/matbakh.png",
+    "category": "HTML, Bootstrap",
+    "alt": "finance"
+  },
+  {
+    "title": "Snake Game",
+    "link": "game.html",
+    "image": "./assets/images/Snake.png",
+    "category": "HTML, CSS, Javascript",
+    "alt": "finance"
+  },
+  {
+    "title": "Solution Auto Detailing",
+    "link": "https://cardetailing.onrender.com/",
+    "image": "./assets/images/solution.png",
+    "category": "HTML, CSS, Javascript",
+    "alt": "finance"
+  }
+]

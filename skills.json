@@ -1,0 +1,78 @@
+[
+  {
+    "name": "AWS",
+    "image": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/aws-light.svg"
+  },
+  {
+    "name": "Firebase",
+    "image": "https://www.svgrepo.com/show/353735/firebase.svg"
+  },
+  {
+    "name": "React",
+    "image": "./assets/images/react.png"
+  },
+  {
+    "name": "Next.js",
+    "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+  },
+  {
+    "name": "Node.js",
+    "image": "./assets/images/nodejs.png"
+  },
+  {
+    "name": "Postgres",
+    "image": "https://www.svgrepo.com/show/354200/postgresql.svg"
+  },
+  {
+    "name": "MongoDB",
+    "image": "https://www.svgrepo.com/show/331488/mongodb.svg"
+  },
+  {
+    "name": "Clickhouse",
+    "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/clickhouse/clickhouse-original.svg"
+  },
+  {
+    "name": "MinIO",
+    "image": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/minio.svg"
+  },
+  {
+    "name": "Docker",
+    "image": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/docker.svg"
+  },
+  {
+    "name": "RabbitMQ",
+    "image": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/rabbitmq.svg"
+  },
+  {
+    "name": "Linux",
+    "image": "https://www.svgrepo.com/show/448236/linux.svg"
+  },
+  {
+    "name": "Python",
+    "image": "https://www.svgrepo.com/show/354238/python.svg"
+  },
+  {
+    "name": "HTML5",
+    "image": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/html5.svg"
+  },
+  {
+    "name": "CSS3",
+    "image": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/css3.svg"
+  },
+  {
+    "name": "Git",
+    "image": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/git.svg"
+  },
+  {
+    "name": "Gitlab",
+    "image": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/gitlab.svg"
+  },
+  {
+    "name": "Shopify",
+    "image": "https://cdn.freebiesupply.com/logos/large/2x/shopify-logo-png-transparent.png"
+  },
+  {
+    "name": "WordPress",
+    "image": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/wordpress.svg"
+  }
+]

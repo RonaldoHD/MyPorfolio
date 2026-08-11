@@ -775,29 +775,55 @@ main {
   margin-bottom: 15px;
 }
 
+.marquee-container {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  padding: 15px 0;
+  background-color: #121212;
+}
+
 .clients-list {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  gap: 15px;
-  margin: 0 -15px;
-  padding: 25px;
-  padding-bottom: 25px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  overscroll-behavior-inline: contain;
-  scroll-snap-type: inline mandatory;
-  scroll-padding-inline: 25px;
+  gap: 60px;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+  padding: 10px 0;
 }
 
 .clients-item {
-  min-width: 50%;
-  scroll-snap-align: start;
+  width: 130px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .clients-item img {
   width: 100%;
+  max-width: 100%;
+  max-height: 70px;
+  object-fit: contain;
+  opacity: 0.75;
+  transition: var(--transition-1);
+}
 
+.clients-item img:hover {
+  opacity: 1;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 
@@ -1037,6 +1063,45 @@ main {
   margin-bottom: 15px;
 }
 
+/* Skeleton loader with shimmer animation */
+.project-img.skeleton {
+  background-color: #2b2b2c;
+}
+
+.project-img.skeleton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 20%,
+    rgba(255, 255, 255, 0.1) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 1.5s infinite;
+  z-index: 2;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.project-img img {
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.project-img.skeleton img {
+  opacity: 0;
+}
+
 .project-img::before {
   content: "";
   position: absolute;
@@ -1083,7 +1148,7 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: var(--transition-1);
+  transition: var(--transition-1), opacity 0.4s ease-in-out;
 }
 
 .project-item>a:hover img {
@@ -1345,19 +1410,69 @@ textarea.form-input::-webkit-resizer {
 \*-----------------------------------*/
 
 /**
+ * mobile carousel — screens smaller than 768px
+ */
+
+@media (max-width: 767px) {
+
+  /* === Services carousel === */
+  .service .row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding: 10px 4px 20px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+  .service .row::-webkit-scrollbar { display: none; }
+
+  .service .row > [class*="col-"] {
+    flex: 0 0 82vw;
+    max-width: 82vw;
+    scroll-snap-align: start;
+    margin-bottom: 0 !important;
+  }
+
+  .service .row > [class*="col-"] .service-item {
+    height: 100%;
+    min-height: 200px;
+  }
+
+  /* === Portfolio carousel === */
+  .project-list {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding: 10px 4px 20px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    grid-template-columns: unset !important;
+  }
+  .project-list::-webkit-scrollbar { display: none; }
+
+  .project-list .project-item {
+    flex: 0 0 82vw;
+    max-width: 82vw;
+    scroll-snap-align: start;
+    display: block !important;
+  }
+
+}
+
+
+/**
  * responsive larger than 450px screen
  */
 
 @media (min-width: 450px) {
 
   /**
-   * client
-   */
-
-  .clients-item {
-    min-width: calc(33.33% - 10px);
-  }
-
 
 
   /**
@@ -1632,19 +1747,6 @@ textarea.form-input::-webkit-resizer {
     display: block;
     flex-grow: 1;
     width: 35px;
-  }
-
-  /* clients */
-
-  .clients-list {
-    gap: 50px;
-    margin: 0 -30px;
-    padding: 45px;
-    scroll-padding-inline: 45px;
-  }
-
-  .clients-item {
-    min-width: calc(33.33% - 35px);
   }
 
 
@@ -1946,12 +2048,6 @@ textarea.form-input::-webkit-resizer {
 
   .testimonials-item {
     min-width: calc(50% - 15px);
-  }
-
-  /* clients */
-
-  .clients-item {
-    min-width: calc(25% - 38px);
   }
 
 
