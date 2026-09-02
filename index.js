@@ -1,8 +1,39 @@
 
 
-const serviceID = 'service_uqdmiqg'
-    const templateID = 'template_ajzmnf9'
-    console.log("test")
+// ============================================
+// Portfolio Theme Selection Variable
+// Options: 'light' or 'dark'
+// Change this variable to switch theme anytime!
+// ============================================
+let currentTheme = 'light';
+
+function applyTheme(theme) {
+    const selectedTheme = theme || 'light';
+    document.documentElement.setAttribute('data-theme', selectedTheme);
+    if (document.body) {
+        document.body.setAttribute('data-theme', selectedTheme);
+    }
+}
+
+// Apply chosen theme immediately
+applyTheme(currentTheme);
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => applyTheme(currentTheme));
+} else {
+    applyTheme(currentTheme);
+}
+
+// Expose theme helper globally
+window.currentTheme = currentTheme;
+window.setTheme = function(newTheme) {
+    currentTheme = newTheme;
+    applyTheme(newTheme);
+};
+
+const serviceID = 'service_uqdmiqg';
+const templateID = 'template_ajzmnf9';
+console.log("test");
 
 function sendMail(){
 
